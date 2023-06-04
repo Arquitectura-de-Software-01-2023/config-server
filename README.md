@@ -1,4 +1,4 @@
-# Serverless Framework Node HTTP API on AWS
+# Config Server
 
 This project aimed to showcase a quick demo of AWS Lambda functions. For this purpose, I've thought of emulating a configuration server
 
