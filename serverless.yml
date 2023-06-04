@@ -1,0 +1,24 @@
+service: conf-server
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  getConfig:
+    handler: index.get
+    events:
+      - httpApi:
+          path: /{id}
+          method: get
+  postConfig:
+    handler: index.post
+    events:
+      - httpApi:
+          path: /
+          method: post
+
+plugins:
+  - serverless-offline
